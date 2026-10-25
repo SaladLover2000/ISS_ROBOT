@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="SimofRack_onlylinear_macro">
+
+  <xacro:macro name="SimofRack_onlylinear" params="prefix">
+
+    <!-- Links -->
+    <link name="${prefix}base_link">
+      <inertial>
+        <origin xyz="0.521882 0.334893 0.800713" rpy="0 0 0"/>
+        <mass value="3579.460225"/>
+        <inertia ixx="1.314742e+03" ixy="-2.679564e+00" ixz="7.072870e-01"
+                 iyy="1.520426e+03" iyz="1.096277e-01" izz="6.330666e+02"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.000000 0.000000 0.000000" rpy="1.570796 0.000000 0.000000"/>
+        <geometry>
+          <mesh filename="package://SimofRack_onlylinear_description/meshes/SimofRack_onlylinear/base_link.dae" scale="1 1 1"/>
+        </geometry>
+        <material name="Steel"/>
+      </visual>
+      <collision>
+        <origin xyz="0.000000 0.000000 0.000000" rpy="1.570796 0.000000 0.000000"/>
+        <geometry>
+          <mesh filename="package://SimofRack_onlylinear_description/meshes/SimofRack_onlylinear/base_link_collision.stl" scale="0.01 0.01 0.01"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="${prefix}Top_support">
+      <inertial>
+        <origin xyz="-0.000000 0.007746 -0.040000" rpy="0 0 0"/>
+        <mass value="1.186964"/>
+        <inertia ixx="8.817865e-04" ixy="-6.498087e-09" ixz="1.036572e-09"
+                 iyy="1.514183e-03" iyz="1.200532e-09" izz="1.158340e-03"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+        <geometry>
+          <mesh filename="package://SimofRack_onlylinear_description/meshes/SimofRack_onlylinear/Top_support.dae" scale="1 1 1"/>
+        </geometry>
+        <material name="Steel"/>
+      </visual>
+      <collision>
+        <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+        <geometry>
+          <mesh filename="package://SimofRack_onlylinear_description/meshes/SimofRack_onlylinear/Top_support_collision.stl" scale="0.01 0.01 0.01"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- Joints (internal to assembly) -->
+    <joint name="${prefix}Top_Slider" type="prismatic">
+      <parent link="${prefix}base_link"/>
+      <child link="${prefix}Top_support"/>
+      <origin xyz="0.343397 -0.246184 1.472270" rpy="-1.559233 0.000000 1.570796"/>
+      <axis xyz="0.000000 0.000000 1.000000"/>
+      <limit lower="-0.630000" upper="0.310000" effort="100.0" velocity="1.00"/>
+    <mimic joint="Slider_2" multiplier="1.0" offset="0.0"/>
+    </joint>
+
+    <!-- ROS 2 control: generated generic system -->
+    <ros2_control name="${prefix}SimofRack_onlylinear_system" type="system">
+      <hardware>
+        <plugin>mock_components/GenericSystem</plugin>
+        <param name="cmd_topic">sim/SimofRack_onlylinear_system/cmd</param>
+        <param name="state_topic">sim/SimofRack_onlylinear_system/state</param>
+      </hardware>
+
+      <joint name="${prefix}Top_Slider">
+        <command_interface name="position"/>
+        <command_interface name="velocity"/>
+        <state_interface name="position">
+          <param name="initial_value">0.0</param>
+        </state_interface>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+      </joint>
+    </ros2_control>
+
+  </xacro:macro>
+
+</robot>

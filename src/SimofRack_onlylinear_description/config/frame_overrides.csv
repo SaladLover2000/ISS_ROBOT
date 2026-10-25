@@ -1,0 +1,9 @@
+link,parent_joint,joint_type,rule,original_roll_deg,original_pitch_deg,original_yaw_deg,post_roll_deg,post_pitch_deg,post_yaw_deg,role
+Component6,Rigid_52,fixed,keep,90.000000,90.000000,0.000000,90.000000,90.000000,0.000000,unchanged
+Component7,Slider_3,prismatic,keep,-90.000000,-90.000000,0.000000,-90.000000,-90.000000,0.000000,unchanged
+Linear_Actuator_X_edited_Component1,Slider_2,prismatic,keep,0.000000,0.000000,90.000000,0.000000,0.000000,90.000000,unchanged
+Linear_Actuator_X_edited_Component18,Xslider18_Raack,fixed,keep,0.000000,0.000000,90.000000,0.000000,0.000000,90.000000,unchanged
+Linear_Actuator_Y_Component1,Slider_2_1,prismatic,keep,90.000000,0.000000,-90.000000,90.000000,0.000000,-90.000000,unchanged
+Linear_Actuator_Y_Component18,Xplate_Ymotor,fixed,keep,90.000000,0.000000,-90.000000,90.000000,0.000000,-90.000000,unchanged
+Top_support,Top_Slider,prismatic,keep,-90.000000,0.000000,90.000000,-90.000000,0.000000,90.000000,unchanged
+base_link,,root,auto,90.000000,0.000000,0.000000,0.000000,0.000000,0.000000,root_x_forward_z_up

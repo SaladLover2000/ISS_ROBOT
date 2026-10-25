@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="KK50_A1_macro">
+
+  <xacro:macro name="KK50_A1" params="prefix">
+
+    <!-- Links -->
+    <link name="${prefix}Component7">
+      <inertial>
+        <origin xyz="-0.000021 0.001303 0.030704" rpy="0 0 0"/>
+        <mass value="0.257685"/>
+        <inertia ixx="9.281416e-05" ixy="2.576282e-08" ixz="7.704691e-08"
+                 iyy="1.164599e-04" iyz="1.139945e-07" izz="3.549079e-05"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.000000 -0.007000 -0.181900" rpy="0.000000 0.000000 0.000000"/>
+        <geometry>
+          <mesh filename="package://SimofRack_onlylinear_description/meshes/KK50_A1/Component7.dae" scale="1 1 1"/>
+        </geometry>
+        <material name="Steel"/>
+      </visual>
+      <collision>
+        <origin xyz="0.000000 -0.007000 -0.181900" rpy="0.000000 0.000000 0.000000"/>
+        <geometry>
+          <mesh filename="package://SimofRack_onlylinear_description/meshes/KK50_A1/Component7_collision.stl" scale="0.01 0.01 0.01"/>
+        </geometry>
+      </collision>
+    </link>
+
+  </xacro:macro>
+
+</robot>

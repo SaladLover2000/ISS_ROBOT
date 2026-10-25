@@ -1,0 +1,282 @@
+<?xml version="1.0"?>
+<robot name="SimofRack_onlylinear">
+
+  <!-- Materials -->
+  <material name="Steel">
+    <color rgba="0.627 0.627 0.627 1.0"/>
+  </material>
+
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0.521882 0.334893 0.800713" rpy="0 0 0"/>
+      <mass value="3579.460225"/>
+      <inertia ixx="1.314742e+03" ixy="-2.679564e+00" ixz="7.072870e-01"
+               iyy="1.520426e+03" iyz="1.096277e-01" izz="6.330666e+02"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="1.570796 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://SimofRack_onlylinear_description/meshes/SimofRack_onlylinear/base_link.dae" scale="1 1 1"/>
+      </geometry>
+      <material name="Steel"/>
+    </visual>
+    <collision>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="1.570796 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://SimofRack_onlylinear_description/meshes/SimofRack_onlylinear/base_link_collision.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="Top_support">
+    <inertial>
+      <origin xyz="-0.000000 0.007746 -0.040000" rpy="0 0 0"/>
+      <mass value="1.186964"/>
+      <inertia ixx="8.817865e-04" ixy="-6.498087e-09" ixz="1.036572e-09"
+               iyy="1.514183e-03" iyz="1.200532e-09" izz="1.158340e-03"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://SimofRack_onlylinear_description/meshes/SimofRack_onlylinear/Top_support.dae" scale="1 1 1"/>
+      </geometry>
+      <material name="Steel"/>
+    </visual>
+    <collision>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://SimofRack_onlylinear_description/meshes/SimofRack_onlylinear/Top_support_collision.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="Linear_Actuator_X_edited_Component18">
+    <inertial>
+      <origin xyz="0.026445 0.354406 0.039226" rpy="0 0 0"/>
+      <mass value="8.791194"/>
+      <inertia ixx="1.133893e+00" ixy="-8.257586e-06" ixz="2.680391e-07"
+               iyy="6.857405e-03" iyz="8.425553e-03" izz="1.137360e+00"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://SimofRack_onlylinear_description/meshes/Linear_Actuator_X_edited/Linear_Actuator_X_edited_Component18.dae" scale="1 1 1"/>
+      </geometry>
+      <material name="Steel"/>
+    </visual>
+    <collision>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://SimofRack_onlylinear_description/meshes/Linear_Actuator_X_edited/Linear_Actuator_X_edited_Component18_collision.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="Linear_Actuator_X_edited_Component1">
+    <inertial>
+      <origin xyz="0.000151 -0.009943 0.008213" rpy="0 0 0"/>
+      <mass value="0.346128"/>
+      <inertia ixx="1.912792e-04" ixy="3.004128e-09" ixz="-8.237744e-08"
+               iyy="1.599690e-04" iyz="-6.618975e-08" izz="3.212775e-04"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.026448 -0.301554 -0.050742" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://SimofRack_onlylinear_description/meshes/Linear_Actuator_X_edited/Linear_Actuator_X_edited_Component1.dae" scale="1 1 1"/>
+      </geometry>
+      <material name="Steel"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.026448 -0.301554 -0.050742" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://SimofRack_onlylinear_description/meshes/Linear_Actuator_X_edited/Linear_Actuator_X_edited_Component1_collision.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="Linear_Actuator_Y_Component1">
+    <inertial>
+      <origin xyz="0.000151 -0.009943 0.002213" rpy="0 0 0"/>
+      <mass value="0.346128"/>
+      <inertia ixx="1.912792e-04" ixy="3.004128e-09" ixz="-8.237744e-08"
+               iyy="1.599690e-04" iyz="-6.618975e-08" izz="3.212775e-04"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.026448 -0.301554 -0.056742" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://SimofRack_onlylinear_description/meshes/Linear_Actuator_Y/Linear_Actuator_Y_Component1.dae" scale="1 1 1"/>
+      </geometry>
+      <material name="Steel"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.026448 -0.301554 -0.056742" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://SimofRack_onlylinear_description/meshes/Linear_Actuator_Y/Linear_Actuator_Y_Component1_collision.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="Linear_Actuator_Y_Component18">
+    <inertial>
+      <origin xyz="0.026445 0.354406 0.039226" rpy="0 0 0"/>
+      <mass value="8.791194"/>
+      <inertia ixx="1.133893e+00" ixy="-8.257586e-06" ixz="2.680390e-07"
+               iyy="6.857405e-03" iyz="8.425553e-03" izz="1.137360e+00"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://SimofRack_onlylinear_description/meshes/Linear_Actuator_Y/Linear_Actuator_Y_Component18.dae" scale="1 1 1"/>
+      </geometry>
+      <material name="Steel"/>
+    </visual>
+    <collision>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://SimofRack_onlylinear_description/meshes/Linear_Actuator_Y/Linear_Actuator_Y_Component18_collision.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="Component6">
+    <inertial>
+      <origin xyz="0.000002 0.004083 0.254879" rpy="0 0 0"/>
+      <mass value="1.152329"/>
+      <inertia ixx="5.633072e-03" ixy="1.676894e-09" ixz="5.719478e-08"
+               iyy="5.768001e-03" iyz="-2.703649e-04" izz="4.037948e-04"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://SimofRack_onlylinear_description/meshes/KK50_150/Component6.dae" scale="1 1 1"/>
+      </geometry>
+      <material name="Steel"/>
+    </visual>
+    <collision>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://SimofRack_onlylinear_description/meshes/KK50_150/Component6_collision.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="Component7">
+    <inertial>
+      <origin xyz="-0.000021 0.001303 0.030704" rpy="0 0 0"/>
+      <mass value="0.257685"/>
+      <inertia ixx="9.281416e-05" ixy="2.576282e-08" ixz="7.704691e-08"
+               iyy="1.164599e-04" iyz="1.139945e-07" izz="3.549079e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.000000 -0.007000 -0.181900" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://SimofRack_onlylinear_description/meshes/KK50_A1/Component7.dae" scale="1 1 1"/>
+      </geometry>
+      <material name="Steel"/>
+    </visual>
+    <collision>
+      <origin xyz="0.000000 -0.007000 -0.181900" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://SimofRack_onlylinear_description/meshes/KK50_A1/Component7_collision.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="Top_Slider" type="prismatic">
+    <parent link="base_link"/>
+    <child link="Top_support"/>
+    <origin xyz="0.343397 -0.246184 1.472270" rpy="-1.559233 0.000000 1.570796"/>
+    <axis xyz="0.000000 0.000000 1.000000"/>
+    <limit lower="-0.630000" upper="0.310000" effort="100.0" velocity="1.00"/>
+    <mimic joint="Slider_2" multiplier="1.0" offset="0.0"/>
+  </joint>
+
+  <joint name="Xslider18_Raack" type="fixed">
+    <parent link="base_link"/>
+    <child link="Linear_Actuator_X_edited_Component18"/>
+    <origin xyz="0.976769 -0.294032 0.262728" rpy="0.000000 0.000000 1.570796"/>
+  </joint>
+
+  <joint name="Slider_2" type="prismatic">
+    <parent link="Linear_Actuator_X_edited_Component18"/>
+    <child link="Linear_Actuator_X_edited_Component1"/>
+    <origin xyz="0.026448 0.610209 0.050742" rpy="0.000000 0.000000 0.000000"/>
+    <axis xyz="0.000000 1.000000 0.000000"/>
+    <limit lower="-0.630000" upper="0.310000" effort="100.0" velocity="1.00"/>
+  </joint>
+
+  <joint name="Slider_2_1" type="prismatic">
+    <parent link="Linear_Actuator_Y_Component18"/>
+    <child link="Linear_Actuator_Y_Component1"/>
+    <origin xyz="0.026448018 0.247981983 0.050742072" rpy="0.000000000 0.000000000 0.000000000"/>
+    <axis xyz="0.000000 -1.000000 0.000000"/>
+    <limit lower="-0.650000" upper="0.200000" effort="100.0" velocity="1.00"/>
+  </joint>
+
+  <joint name="Xplate_Ymotor" type="fixed">
+    <parent link="Linear_Actuator_X_edited_Component1"/>
+    <child link="Linear_Actuator_Y_Component18"/>
+    <origin xyz="0.031448 -0.060812 0.177926" rpy="1.570796 0.000000 -3.141593"/>
+  </joint>
+
+  <joint name="Rigid_52" type="fixed">
+    <parent link="Component7"/>
+    <child link="Component6"/>
+    <origin xyz="0.000000002 -0.006999901 0.284666002" rpy="-3.141592307 0.000000000 -3.141592307"/>
+  </joint>
+
+  <joint name="Slider_3" type="prismatic">
+    <parent link="Linear_Actuator_Y_Component1"/>
+    <child link="Component7"/>
+    <origin xyz="0.033350002 -0.009999907 0.016800093" rpy="-1.570796307 -0.000000346 1.570796654"/>
+    <axis xyz="0.000000 0.000000 1.000000"/>
+    <limit lower="-0.057000" upper="0.002500" effort="100.0" velocity="1.00"/>
+  </joint>
+
+  <!-- ROS 2 control: generated generic system -->
+  <ros2_control name="SimofRack_onlylinear_system" type="system">
+    <hardware>
+      <plugin>mock_components/GenericSystem</plugin>
+      <param name="cmd_topic">sim/SimofRack_onlylinear_system/cmd</param>
+      <param name="state_topic">sim/SimofRack_onlylinear_system/state</param>
+    </hardware>
+
+    <joint name="Slider_2">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="Slider_2_1">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="Slider_3">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="Top_Slider">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+  </ros2_control>
+
+</robot>

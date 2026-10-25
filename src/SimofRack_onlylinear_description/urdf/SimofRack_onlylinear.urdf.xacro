@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="SimofRack_onlylinear">
+
+  <!-- Materials (shared across all assemblies) -->
+  <material name="Steel">
+    <color rgba="0.627 0.627 0.627 1.0"/>
+  </material>
+
+  <!-- Assembly includes -->
+  <xacro:include filename="$(find SimofRack_onlylinear_description)/urdf/assemblies/Linear_Actuator_X_edited.urdf.xacro"/>
+  <xacro:include filename="$(find SimofRack_onlylinear_description)/urdf/assemblies/KK50_150.urdf.xacro"/>
+  <xacro:include filename="$(find SimofRack_onlylinear_description)/urdf/assemblies/KK50_A1.urdf.xacro"/>
+  <xacro:include filename="$(find SimofRack_onlylinear_description)/urdf/assemblies/Linear_Actuator_Y.urdf.xacro"/>
+  <xacro:include filename="$(find SimofRack_onlylinear_description)/urdf/assemblies/SimofRack_onlylinear.urdf.xacro"/>
+
+  <!-- Instantiate assemblies -->
+  <xacro:Linear_Actuator_X_edited prefix=""/>
+  <xacro:KK50_150 prefix=""/>
+  <xacro:KK50_A1 prefix=""/>
+  <xacro:Linear_Actuator_Y prefix=""/>
+  <xacro:SimofRack_onlylinear prefix=""/>
+
+  <!-- Mount joints (cross-assembly connections) -->
+  <!-- These define how assemblies connect to each other. -->
+  <!-- When swapping a dummy assembly with a real part, -->
+  <!-- update the include + macro call above, and adjust -->
+  <!-- parent/child link names in the mount joint below. -->
+
+  <joint name="Xslider18_Raack" type="fixed">
+    <parent link="base_link"/>
+    <child link="Linear_Actuator_X_edited_Component18"/>
+    <origin xyz="0.976769 -0.294032 0.262728" rpy="0.000000 0.000000 1.570796"/>
+  </joint>
+
+  <joint name="Slider_2_1" type="prismatic">
+    <parent link="Linear_Actuator_Y_Component18"/>
+    <child link="Linear_Actuator_Y_Component1"/>
+    <origin xyz="0.026448018 0.247981983 0.050742072" rpy="0.000000000 0.000000000 0.000000000"/>
+    <axis xyz="0.000000 -1.000000 0.000000"/>
+    <limit lower="-0.650000" upper="0.200000" effort="100.0" velocity="1.00"/>
+  </joint>
+
+  <joint name="Xplate_Ymotor" type="fixed">
+    <parent link="Linear_Actuator_X_edited_Component1"/>
+    <child link="Linear_Actuator_Y_Component18"/>
+    <origin xyz="0.031448 -0.060812 0.177926" rpy="1.570796 0.000000 -3.141593"/>
+  </joint>
+
+  <joint name="Rigid_52" type="fixed">
+    <parent link="Component7"/>
+    <child link="Component6"/>
+    <origin xyz="0.000000002 -0.006999901 0.284666002" rpy="-3.141592307 0.000000000 -3.141592307"/>
+  </joint>
+
+  <joint name="Slider_3" type="prismatic">
+    <parent link="Linear_Actuator_Y_Component1"/>
+    <child link="Component7"/>
+    <origin xyz="0.033350002 -0.009999907 0.016800093" rpy="-1.570796307 -0.000000346 1.570796654"/>
+    <axis xyz="0.000000 0.000000 1.000000"/>
+    <limit lower="-0.057000" upper="0.002500" effort="100.0" velocity="1.00"/>
+  </joint>
+
+  <!-- ROS 2 control: generated generic system -->
+  <ros2_control name="SimofRack_onlylinear_system" type="system">
+    <hardware>
+      <plugin>mock_components/GenericSystem</plugin>
+      <param name="cmd_topic">sim/SimofRack_onlylinear_system/cmd</param>
+      <param name="state_topic">sim/SimofRack_onlylinear_system/state</param>
+    </hardware>
+
+    <joint name="Slider_2_1">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="Slider_3">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+  </ros2_control>
+
+</robot>

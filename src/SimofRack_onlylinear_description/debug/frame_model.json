@@ -1,0 +1,1711 @@
+{
+  "cache_version": 1,
+  "config": {
+    "collision_auto_method": "primitive",
+    "collision_format": "stl",
+    "export_collision_mesh": true,
+    "export_visual_mesh": true,
+    "frame_convention": "ros",
+    "frame_overrides_filename": "frame_overrides.csv",
+    "include_debug": true,
+    "include_docs": true,
+    "include_launch": true,
+    "include_readme": true,
+    "include_robot_data_yaml": true,
+    "include_ros2_control": true,
+    "include_rviz": true,
+    "include_screenshot": true,
+    "mesh_refinement": "medium",
+    "output_dir": "C:/Users/batgi/Downloads",
+    "override_explicit_collision": false,
+    "package_name": "SimofRack_onlylinear_description",
+    "robot_prefix": "",
+    "ros2_control_command_interfaces": [
+      "position",
+      "velocity"
+    ],
+    "ros2_control_hardware_plugin": "mock_components/GenericSystem",
+    "ros2_control_update_rate": 100,
+    "use_xacro": false,
+    "verbosity": "verbose",
+    "visual_format": "dae",
+    "zip_name": "",
+    "zip_output": false
+  },
+  "model": {
+    "assemblies": {
+      "KK50_150": {
+        "children_assemblies": [],
+        "depth": 1,
+        "global_offset": [
+          -0.16587328226179018,
+          4.476207814235227,
+          0.8616496825041462
+        ],
+        "global_rotation": [
+          5.334927978653797e-13,
+          1.0000000000000002,
+          -5.770196684403655e-13,
+          -6.1690214756532e-15,
+          -5.771723241062494e-13,
+          -1.0000000000000007,
+          -1.0000000000000002,
+          5.336176979556858e-13,
+          6.169021475345529e-15
+        ],
+        "joints": [],
+        "links": [
+          "Component6"
+        ],
+        "name": "KK50_150",
+        "parent_assembly": "Linear_Act_Z"
+      },
+      "KK50_A1": {
+        "children_assemblies": [],
+        "depth": 1,
+        "global_offset": [
+          0.4707465120450437,
+          4.004091763384455,
+          0.9034848793276066
+        ],
+        "global_rotation": [
+          -1.6920863586468951e-13,
+          -1.0,
+          2.505473062524366e-13,
+          -3.4411320134760065e-14,
+          2.506999619183279e-13,
+          1.0,
+          -1.0,
+          1.6933353595524863e-13,
+          -3.4411320134802285e-14
+        ],
+        "joints": [],
+        "links": [
+          "Component7"
+        ],
+        "name": "KK50_A1",
+        "parent_assembly": "Linear_Act_Z"
+      },
+      "Linear_Act_Z": {
+        "children_assemblies": [
+          "KK50_150",
+          "KK50_A1"
+        ],
+        "depth": 0,
+        "global_offset": [
+          0.24999999999996747,
+          4.18,
+          0.7649999999999912
+        ],
+        "global_rotation": [
+          5.31644173129432e-13,
+          1.0000000000000002,
+          -6.175754352355214e-13,
+          5.3443360847894293e-14,
+          -6.177280909014364e-13,
+          -1.0000000000000007,
+          -1.0000000000000002,
+          5.317690732199664e-13,
+          -5.344336084822248e-14
+        ],
+        "joints": [
+          "Slider_3"
+        ],
+        "links": [],
+        "name": "Linear_Act_Z",
+        "parent_assembly": null
+      },
+      "Linear_Actuator_X_edited": {
+        "children_assemblies": [],
+        "depth": 0,
+        "global_offset": [
+          0.458379466938376,
+          4.2014440627613725,
+          0.395000000000002
+        ],
+        "global_rotation": [
+          2.1427304375265685e-14,
+          -0.9999999999999987,
+          -3.1974664474288453e-16,
+          1.0000000000000033,
+          2.1163626406917047e-14,
+          -5.046640064078074e-18,
+          -1.700427549137559e-17,
+          -1.94359758237263e-16,
+          0.9999999999999993
+        ],
+        "joints": [
+          "Slider_2"
+        ],
+        "links": [
+          "Linear_Actuator_X_edited_Component1",
+          "Linear_Actuator_X_edited_Component18"
+        ],
+        "name": "Linear_Actuator_X_edited",
+        "parent_assembly": null
+      },
+      "Linear_Actuator_Y": {
+        "children_assemblies": [],
+        "depth": 0,
+        "global_offset": [
+          0.19903577943481957,
+          4.251339464007639,
+          0.6692658673559785
+        ],
+        "global_rotation": [
+          -9.389264882930258e-15,
+          -5.235486741094649e-13,
+          -0.9999999999999846,
+          -0.9999999999999858,
+          2.0085226529736226e-14,
+          8.695375492528745e-15,
+          2.0004132717856946e-14,
+          0.9999999999999983,
+          -5.24003869253124e-13
+        ],
+        "joints": [
+          "Slider_2_1"
+        ],
+        "links": [
+          "Linear_Actuator_Y_Component1",
+          "Linear_Actuator_Y_Component18"
+        ],
+        "name": "Linear_Actuator_Y",
+        "parent_assembly": null
+      },
+      "SimofRack_onlylinear": {
+        "children_assemblies": [],
+        "depth": 0,
+        "global_offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "global_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "joints": [
+          "Top_Slider",
+          "Xslider18_Raack",
+          "Xplate_Ymotor",
+          "Rigid_52",
+          "Ybar_topslider"
+        ],
+        "links": [
+          "base_link",
+          "Top_support"
+        ],
+        "name": "SimofRack_onlylinear",
+        "parent_assembly": null
+      }
+    },
+    "closing_joints": {
+      "Ybar_topslider": {
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "child_link": "Top_support",
+        "closing_source": "auto_detected",
+        "fusion_source": "regular",
+        "is_closing": true,
+        "is_mount": true,
+        "is_passive": true,
+        "joint_type": "fixed",
+        "limits": null,
+        "name": "Ybar_topslider",
+        "origin_global": [
+          -0.17530606644800678,
+          4.241292713426052,
+          1.6045417725595603
+        ],
+        "origin_method": "child_minus_parent",
+        "origin_rpy": [
+          5.482168120845888e-13,
+          8.842625440722854e-14,
+          -3.141592653589777
+        ],
+        "origin_xyz": [
+          0.010046750581597784,
+          0.9808740821663009,
+          0.08397455674537059
+        ],
+        "parent_link": "Linear_Actuator_Y_Component18"
+      }
+    },
+    "errors": [],
+    "joints": {
+      "Rigid_52": {
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "child_link": "Component6",
+        "closing_source": "",
+        "fusion_source": "regular",
+        "is_closing": false,
+        "is_mount": true,
+        "is_passive": false,
+        "joint_type": "fixed",
+        "limits": null,
+        "name": "Rigid_52",
+        "origin_global": [
+          -0.16587328226179018,
+          4.476207814235227,
+          0.8616496825041462
+        ],
+        "origin_method": "child_minus_parent",
+        "origin_rpy": [
+          -1.570796326794321,
+          -2.435410673638436e-18,
+          -1.5707963267948968
+        ],
+        "origin_xyz": [
+          -0.2513160508507424,
+          -0.009999999999999737,
+          0.023799999999854275
+        ],
+        "parent_link": "Linear_Actuator_Y_Component1"
+      },
+      "Slider_2": {
+        "axis": [
+          -1.0,
+          -2.325747162958574e-15,
+          -3.3891840616431843e-15
+        ],
+        "child_link": "Linear_Actuator_X_edited_Component1",
+        "closing_source": "",
+        "fusion_source": "regular",
+        "is_closing": false,
+        "is_mount": false,
+        "is_passive": false,
+        "joint_type": "prismatic",
+        "limits": {
+          "effort": 100.0,
+          "lower": -0.875,
+          "upper": 0.01,
+          "velocity": 1.0
+        },
+        "name": "Slider_2",
+        "origin_global": [
+          -0.152143282261722,
+          4.219891763384482,
+          0.4457417725598687
+        ],
+        "origin_method": "joint_minus_parent",
+        "origin_rpy": [
+          -2.2226516538913915e-14,
+          3.0031667423145428e-15,
+          1.1345735144295227e-14
+        ],
+        "origin_xyz": [
+          0.026447700623161347,
+          0.6102088851265538,
+          0.05074177255969395
+        ],
+        "parent_link": "Linear_Actuator_X_edited_Component18"
+      },
+      "Slider_2_1": {
+        "axis": [
+          1.0,
+          -4.1796438728838154e-15,
+          -2.3257471629470637e-15
+        ],
+        "child_link": "Linear_Actuator_Y_Component1",
+        "closing_source": "",
+        "fusion_source": "regular",
+        "is_closing": false,
+        "is_mount": true,
+        "is_passive": false,
+        "joint_type": "prismatic",
+        "limits": {
+          "effort": 100.0,
+          "lower": -0.85,
+          "upper": -0.01,
+          "velocity": 1.0
+        },
+        "name": "Slider_2_1",
+        "origin_global": [
+          -0.1420732822619416,
+          4.224891763384485,
+          0.8716496825041601
+        ],
+        "origin_method": "joint_minus_parent",
+        "origin_rpy": [
+          1.5707963267954301,
+          -3.793626553557224e-15,
+          -3.141592653589782
+        ],
+        "origin_xyz": [
+          0.031447700623163,
+          0.6001388851267737,
+          0.47664968250398504
+        ],
+        "parent_link": "Linear_Actuator_X_edited_Component18"
+      },
+      "Slider_3": {
+        "axis": [
+          -1.0,
+          -5.33393738772691e-13,
+          6.0020886586452836e-15
+        ],
+        "child_link": "Component7",
+        "closing_source": "",
+        "fusion_source": "regular",
+        "is_closing": false,
+        "is_mount": true,
+        "is_passive": false,
+        "joint_type": "prismatic",
+        "limits": {
+          "effort": 100.0,
+          "lower": 0.01,
+          "upper": 0.075,
+          "velocity": 1.0
+        },
+        "name": "Slider_3",
+        "origin_global": [
+          -0.15887328226195443,
+          4.191541763384487,
+          0.8616496825041515
+        ],
+        "origin_method": "joint_minus_parent",
+        "origin_rpy": [
+          3.141592653589793,
+          -1.6802737281207551e-28,
+          3.141592653589793
+        ],
+        "origin_xyz": [
+          1.6149004785687967e-16,
+          0.007000000000000052,
+          0.28466605085073626
+        ],
+        "parent_link": "Component6"
+      },
+      "Top_Slider": {
+        "axis": [
+          -2.144514149414824e-14,
+          -1.0,
+          1.2926490235157327e-14
+        ],
+        "child_link": "Top_support",
+        "closing_source": "",
+        "fusion_source": "regular",
+        "is_closing": false,
+        "is_mount": false,
+        "is_passive": false,
+        "joint_type": "prismatic",
+        "limits": null,
+        "name": "Top_Slider",
+        "origin_global": [
+          -0.17530606644800678,
+          4.241292713426052,
+          1.6045417725595603
+        ],
+        "origin_method": "joint_minus_parent",
+        "origin_rpy": [
+          2.2773899954240693,
+          1.5707962193410951,
+          -0.8757662548616811
+        ],
+        "origin_xyz": [
+          0.34339720799669066,
+          1.4722701464620411,
+          0.24618369873971668
+        ],
+        "parent_link": "base_link"
+      },
+      "Xplate_Ymotor": {
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "child_link": "Linear_Actuator_Y_Component18",
+        "closing_source": "",
+        "fusion_source": "regular",
+        "is_closing": false,
+        "is_mount": true,
+        "is_passive": false,
+        "joint_type": "fixed",
+        "limits": null,
+        "name": "Xplate_Ymotor",
+        "origin_global": [
+          -0.09133150970211025,
+          4.2513394640076445,
+          0.623667690393304
+        ],
+        "origin_method": "child_minus_parent",
+        "origin_rpy": [
+          1.5707963267954097,
+          2.0816680826790143e-17,
+          -3.141592653589793
+        ],
+        "origin_xyz": [
+          0.03144770062316128,
+          -0.06081177255961564,
+          0.17792591783343417
+        ],
+        "parent_link": "Linear_Actuator_X_edited_Component1"
+      },
+      "Xslider18_Raack": {
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "child_link": "Linear_Actuator_X_edited_Component18",
+        "closing_source": "",
+        "fusion_source": "regular",
+        "is_closing": false,
+        "is_mount": true,
+        "is_passive": false,
+        "joint_type": "fixed",
+        "limits": null,
+        "name": "Xslider18_Raack",
+        "origin_global": [
+          0.4580656028648323,
+          4.193444062761313,
+          0.39500000000017477
+        ],
+        "origin_method": "child_minus_parent",
+        "origin_rpy": [
+          -1.5707963267948941,
+          1.5707963267948966,
+          0.0
+        ],
+        "origin_xyz": [
+          0.9767688773095287,
+          0.2627283739026566,
+          0.29403234940455936
+        ],
+        "parent_link": "base_link"
+      }
+    },
+    "links": {
+      "Component6": {
+        "area_m2": 0.05008501309679831,
+        "assembly": "KK50_150",
+        "bbox_max": [
+          0.025000000000000005,
+          0.029500000000000012,
+          0.36
+        ],
+        "bbox_min": [
+          -0.025000000000000005,
+          -0.009000000000000003,
+          0.14
+        ],
+        "bbox_size": [
+          0.05000000000000001,
+          0.03850000000000001,
+          0.21999999999999997
+        ],
+        "body_count": 1,
+        "clean_name": "Component6",
+        "collision": {
+          "mesh_path": "meshes/KK50_150/Component6_collision.stl",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": {
+            "orientation_matrix": null,
+            "origin_rpy": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "origin_xyz": [
+              0.0,
+              0.010250000000000006,
+              0.25
+            ],
+            "shape": "box",
+            "size": [
+              0.05000000000000001,
+              0.03850000000000001,
+              0.21999999999999997
+            ]
+          },
+          "source": "primitive"
+        },
+        "collision_bbox_max": [
+          0.025000000000000005,
+          0.029500000000000012,
+          0.36
+        ],
+        "collision_bbox_min": [
+          -0.025000000000000005,
+          -0.009000000000000003,
+          0.14
+        ],
+        "collision_bbox_size": [
+          0.05000000000000001,
+          0.03850000000000001,
+          0.21999999999999997
+        ],
+        "collision_body_count": 1,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 0.0001467935025951929,
+        "color_rgb": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "com_link_local": [
+          2.096847081157053e-06,
+          0.0040831045037168475,
+          0.25487939622755335
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          -0.16587328226179018,
+          4.476207814235227,
+          0.8616496825041462
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 0.005633072059013047,
+          "ixy": 1.676894414183403e-09,
+          "ixz": 5.719478322701032e-08,
+          "iyy": 0.0057680010282172844,
+          "iyz": -0.00027036494212582716,
+          "izz": 0.00040379475851588066
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": false,
+        "mass_kg": 1.1523289953722642,
+        "material_name": "Steel",
+        "merged_member_paths": [],
+        "mesh_bake_offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_collision": "meshes/KK50_150/Component6_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/KK50_150/Component6.dae",
+        "needs_mesh_bake": false,
+        "occurrence_path": "Linear Act Z:1+KK50-150:1+Component6:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": null,
+        "source_world_rotation": [
+          5.334927978653797e-13,
+          1.0000000000000002,
+          -5.770196684403655e-13,
+          -6.1690214756532e-15,
+          -5.771723241062494e-13,
+          -1.0000000000000007,
+          -1.0000000000000002,
+          5.336176979556858e-13,
+          6.169021475345529e-15
+        ],
+        "urdf_name": "Component6",
+        "volume_m3": 0.0001467935025951929,
+        "wants_accurate_collision": false
+      },
+      "Component7": {
+        "area_m2": 0.011035470191462912,
+        "assembly": "KK50_A1",
+        "bbox_max": [
+          0.020500000000000004,
+          0.017,
+          0.24970000000000003
+        ],
+        "bbox_min": [
+          -0.020500000000000004,
+          0.00019999999999999434,
+          0.1757
+        ],
+        "bbox_size": [
+          0.04100000000000001,
+          0.016800000000000006,
+          0.07400000000000004
+        ],
+        "body_count": 1,
+        "clean_name": "Component7",
+        "collision": {
+          "mesh_path": "meshes/KK50_A1/Component7_collision.stl",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": {
+            "orientation_matrix": null,
+            "origin_rpy": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "origin_xyz": [
+              0.0,
+              0.008599999999999998,
+              0.2127
+            ],
+            "shape": "box",
+            "size": [
+              0.04100000000000001,
+              0.016800000000000006,
+              0.07400000000000004
+            ]
+          },
+          "source": "primitive"
+        },
+        "collision_bbox_max": [
+          0.020500000000000004,
+          0.017,
+          0.24970000000000003
+        ],
+        "collision_bbox_min": [
+          -0.020500000000000004,
+          0.00019999999999999434,
+          0.1757
+        ],
+        "collision_bbox_size": [
+          0.04100000000000001,
+          0.016800000000000006,
+          0.07400000000000004
+        ],
+        "collision_body_count": 1,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 3.282607200609745e-05,
+        "color_rgb": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "com_link_local": [
+          -2.106096193756621e-05,
+          0.008302839057120332,
+          0.21260389065274363
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          -0.1658732822620594,
+          4.009641763384491,
+          0.861649682504149
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 9.281416262945687e-05,
+          "ixy": 2.576282218605129e-08,
+          "ixz": 7.704691024659308e-08,
+          "iyy": 0.00011645993436104791,
+          "iyz": 1.139944642985515e-07,
+          "izz": 3.549078916259807e-05
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": false,
+        "mass_kg": 0.25768466524786493,
+        "material_name": "Steel",
+        "merged_member_paths": [],
+        "mesh_bake_offset": [
+          5.793436929510677e-17,
+          -0.006999999999999981,
+          -0.18190000000000034
+        ],
+        "mesh_collision": "meshes/KK50_A1/Component7_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/KK50_A1/Component7.dae",
+        "needs_mesh_bake": true,
+        "occurrence_path": "Linear Act Z:1+KK50-A1:1+Component7:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": null,
+        "source_world_rotation": [
+          -5.33370333185465e-13,
+          1.0000000000000002,
+          5.770809007803229e-13,
+          6.169021475653124e-15,
+          -5.77233556446207e-13,
+          1.0000000000000007,
+          1.0000000000000002,
+          5.334952332760366e-13,
+          -6.169021475345529e-15
+        ],
+        "urdf_name": "Component7",
+        "volume_m3": 3.282607200609745e-05,
+        "wants_accurate_collision": false
+      },
+      "Linear_Actuator_X_edited_Component1": {
+        "area_m2": 0.026004802769241032,
+        "assembly": "Linear_Actuator_X_edited",
+        "bbox_max": [
+          0.0650227006231605,
+          0.330128580087987,
+          0.0660417725596996
+        ],
+        "bbox_min": [
+          -0.012127299376839602,
+          0.252978580087987,
+          0.0386417725596996
+        ],
+        "bbox_size": [
+          0.07715000000000011,
+          0.07715,
+          0.027400000000000008
+        ],
+        "body_count": 2,
+        "clean_name": "Component1",
+        "collision": {
+          "mesh_path": "meshes/Linear_Actuator_X_edited/Linear_Actuator_X_edited_Component1_collision.stl",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": {
+            "orientation_matrix": null,
+            "origin_rpy": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "origin_xyz": [
+              0.026447700623160448,
+              0.29155358008798704,
+              0.0523417725596996
+            ],
+            "shape": "cylinder",
+            "size": [
+              0.038575000000000026,
+              0.0,
+              0.027400000000000008
+            ]
+          },
+          "source": "primitive"
+        },
+        "collision_bbox_max": [
+          0.0650227006231605,
+          0.330128580087987,
+          0.0660417725596996
+        ],
+        "collision_bbox_min": [
+          -0.012127299376839602,
+          0.252978580087987,
+          0.0386417725596996
+        ],
+        "collision_bbox_size": [
+          0.07715000000000011,
+          0.07715,
+          0.027400000000000008
+        ],
+        "collision_body_count": 2,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 4.4092782941201066e-05,
+        "color_rgb": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "com_link_local": [
+          0.026599177307420414,
+          0.291610877535377,
+          0.058954295499269734
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          0.1494102978262661,
+          4.193444062761321,
+          0.3950000000001759
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 0.0001912791949021421,
+          "ixy": 3.0041281133715014e-09,
+          "ixz": -8.237743717709727e-08,
+          "iyy": 0.00015996901122834598,
+          "iyz": -6.618975000299149e-08,
+          "izz": 0.00032127753256438324
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": false,
+        "mass_kg": 0.34612834608842835,
+        "material_name": "Steel",
+        "merged_member_paths": [],
+        "mesh_bake_offset": [
+          -0.026447700623160653,
+          -0.30155358008798705,
+          -0.05074177255969966
+        ],
+        "mesh_collision": "meshes/Linear_Actuator_X_edited/Linear_Actuator_X_edited_Component1_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/Linear_Actuator_X_edited/Linear_Actuator_X_edited_Component1.dae",
+        "needs_mesh_bake": true,
+        "occurrence_path": "Linear Actuator X_edited:1+Component1:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": null,
+        "source_world_rotation": [
+          1.4740550117472254e-15,
+          -1.0,
+          -2.2226516538913662e-14,
+          1.0,
+          1.4740550117558707e-15,
+          5.4397940043702406e-15,
+          -5.439794004366953e-15,
+          -2.2226516538914167e-14,
+          1.0
+        ],
+        "urdf_name": "Linear_Actuator_X_edited_Component1",
+        "volume_m3": 4.4092782941201066e-05,
+        "wants_accurate_collision": false
+      },
+      "Linear_Actuator_X_edited_Component18": {
+        "area_m2": 0.9193990072960765,
+        "assembly": "Linear_Actuator_X_edited",
+        "bbox_max": [
+          0.06644770062316108,
+          0.9558740821665895,
+          0.07901177255969974
+        ],
+        "bbox_min": [
+          -0.013552299376840157,
+          -0.1641259178334076,
+          0.018341772559699526
+        ],
+        "bbox_size": [
+          0.08000000000000124,
+          1.1199999999999972,
+          0.06067000000000021
+        ],
+        "body_count": 1,
+        "clean_name": "Component18",
+        "collision": {
+          "mesh_path": "meshes/Linear_Actuator_X_edited/Linear_Actuator_X_edited_Component18_collision.stl",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": {
+            "orientation_matrix": [
+              0.004451687031688571,
+              0.9954214044245302,
+              -0.09547989367436346,
+              0.9999824044793891,
+              -0.004056942823537572,
+              0.004328041883574267,
+              0.003920869060721347,
+              -0.09549748074385211,
+              -0.995421949706448
+            ],
+            "origin_rpy": [
+              -3.045948683979595,
+              -0.003920879106850826,
+              1.56634459084041
+            ],
+            "origin_xyz": [
+              0.023563547773379528,
+              0.42039987307105225,
+              0.040979508089224
+            ],
+            "shape": "box",
+            "size": [
+              1.0706016494377477,
+              0.0686704646311536,
+              0.04008932331563899
+            ]
+          },
+          "source": "primitive"
+        },
+        "collision_bbox_max": [
+          0.06644770062316108,
+          0.9558740821665895,
+          0.07901177255969974
+        ],
+        "collision_bbox_min": [
+          -0.013552299376840157,
+          -0.1641259178334076,
+          0.018341772559699526
+        ],
+        "collision_bbox_size": [
+          0.08000000000000124,
+          1.1199999999999972,
+          0.06067000000000021
+        ],
+        "collision_body_count": 17,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 0.0011198973546951247,
+        "color_rgb": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "com_link_local": [
+          0.02644534428527991,
+          0.35440619431797754,
+          0.039226469319455545
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          0.4580656028648323,
+          4.193444062761313,
+          0.39500000000017477
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 1.1338930542833692,
+          "ixy": -8.257585624271367e-06,
+          "ixz": 2.6803905107143035e-07,
+          "iyy": 0.006857405164320063,
+          "iyz": 0.008425553043293113,
+          "izz": 1.1373600290207055
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": true,
+        "mass_kg": 8.791194234356732,
+        "material_name": "Steel",
+        "merged_member_paths": [
+          "Linear Actuator X_edited:1+Component2:1",
+          "Linear Actuator X_edited:1+Component7:1",
+          "Linear Actuator X_edited:1+Component18:1",
+          "Linear Actuator X_edited:1+Component3:1",
+          "Linear Actuator X_edited:1+Component4:1",
+          "Linear Actuator X_edited:1+Component14:1",
+          "Linear Actuator X_edited:1+Component15:1",
+          "Linear Actuator X_edited:1+Component8:1",
+          "Linear Actuator X_edited:1+Component11:1",
+          "Linear Actuator X_edited:1+Component12:1",
+          "Linear Actuator X_edited:1+Component9:1",
+          "Linear Actuator X_edited:1+Component13:1",
+          "Linear Actuator X_edited:1+Component10:1",
+          "Linear Actuator X_edited:1+Component5:1",
+          "Linear Actuator X_edited:1+Component6:1",
+          "Linear Actuator X_edited:1+Component16:1",
+          "Linear Actuator X_edited:1+Component17:1"
+        ],
+        "mesh_bake_offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_collision": "meshes/Linear_Actuator_X_edited/Linear_Actuator_X_edited_Component18_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/Linear_Actuator_X_edited/Linear_Actuator_X_edited_Component18.dae",
+        "needs_mesh_bake": false,
+        "occurrence_path": "Linear Actuator X_edited:1+Component18:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": "Rigid Group 4",
+        "source_world_rotation": [
+          1.3083468124391068e-14,
+          -0.9999999999999988,
+          -2.4968731383625457e-28,
+          1.0000000000000033,
+          1.2819790156042489e-14,
+          2.4366272620524066e-15,
+          -2.458678177604619e-15,
+          1.2538688650605734e-16,
+          0.9999999999999993
+        ],
+        "urdf_name": "Linear_Actuator_X_edited_Component18",
+        "volume_m3": 0.0011198973546951247,
+        "wants_accurate_collision": false
+      },
+      "Linear_Actuator_Y_Component1": {
+        "area_m2": 0.026004802769241032,
+        "assembly": "Linear_Actuator_Y",
+        "bbox_max": [
+          0.0650227006231605,
+          0.330128580087987,
+          0.0660417725596996
+        ],
+        "bbox_min": [
+          -0.012127299376839602,
+          0.252978580087987,
+          0.0386417725596996
+        ],
+        "bbox_size": [
+          0.07715000000000011,
+          0.07715,
+          0.027400000000000008
+        ],
+        "body_count": 2,
+        "clean_name": "Component1",
+        "collision": {
+          "mesh_path": "meshes/Linear_Actuator_Y/Linear_Actuator_Y_Component1_collision.stl",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": {
+            "orientation_matrix": null,
+            "origin_rpy": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "origin_xyz": [
+              0.026447700623160448,
+              0.29155358008798704,
+              0.0523417725596996
+            ],
+            "shape": "cylinder",
+            "size": [
+              0.038575000000000026,
+              0.0,
+              0.027400000000000008
+            ]
+          },
+          "source": "primitive"
+        },
+        "collision_bbox_max": [
+          0.0650227006231605,
+          0.330128580087987,
+          0.0660417725596996
+        ],
+        "collision_bbox_min": [
+          -0.012127299376839602,
+          0.252978580087987,
+          0.0386417725596996
+        ],
+        "collision_bbox_size": [
+          0.07715000000000011,
+          0.07715,
+          0.027400000000000008
+        ],
+        "collision_body_count": 2,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 4.4092782941201066e-05,
+        "color_rgb": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "com_link_local": [
+          0.026599177307420414,
+          0.291610877535377,
+          0.058954295499269734
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          -0.08533150970208109,
+          4.251339464007644,
+          0.5700961024162029
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 0.0001912791949021421,
+          "ixy": 3.0041281133715014e-09,
+          "ixz": -8.237743717709727e-08,
+          "iyy": 0.00015996901122834598,
+          "iyz": -6.618975000299149e-08,
+          "izz": 0.00032127753256438324
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": false,
+        "mass_kg": 0.34612834608842835,
+        "material_name": "Steel",
+        "merged_member_paths": [],
+        "mesh_bake_offset": [
+          -0.026447700623160673,
+          -0.3015535800879873,
+          -0.05674177255969961
+        ],
+        "mesh_collision": "meshes/Linear_Actuator_Y/Linear_Actuator_Y_Component1_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/Linear_Actuator_Y/Linear_Actuator_Y_Component1.dae",
+        "needs_mesh_bake": true,
+        "occurrence_path": "Linear Actuator Y:1+Component1:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": null,
+        "source_world_rotation": [
+          -1.4740550117465817e-15,
+          -5.334952332760534e-13,
+          -1.0000000000000002,
+          -1.0,
+          6.230253815610436e-15,
+          1.474055011743312e-15,
+          6.230253815609634e-15,
+          1.0000000000000002,
+          -5.334952332760534e-13
+        ],
+        "urdf_name": "Linear_Actuator_Y_Component1",
+        "volume_m3": 4.4092782941201066e-05,
+        "wants_accurate_collision": false
+      },
+      "Linear_Actuator_Y_Component18": {
+        "area_m2": 0.9193990072960766,
+        "assembly": "Linear_Actuator_Y",
+        "bbox_max": [
+          0.06644770062315915,
+          0.9558740821665914,
+          0.07901177255969834
+        ],
+        "bbox_min": [
+          -0.013552299376839551,
+          -0.16412591783340794,
+          0.018341772559699217
+        ],
+        "bbox_size": [
+          0.0799999999999987,
+          1.1199999999999994,
+          0.06066999999999912
+        ],
+        "body_count": 1,
+        "clean_name": "Component18",
+        "collision": {
+          "mesh_path": "meshes/Linear_Actuator_Y/Linear_Actuator_Y_Component18_collision.stl",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": {
+            "orientation_matrix": [
+              0.004451687037695841,
+              0.9954214044214483,
+              -0.09547989370621379,
+              0.9999824044796977,
+              -0.0040569428375436065,
+              0.004328041799172052,
+              0.0039208689752257275,
+              -0.09549748077538159,
+              -0.99542194970376
+            ],
+            "origin_rpy": [
+              -3.045948683947952,
+              -0.00392087902135455,
+              1.566344590834404
+            ],
+            "origin_xyz": [
+              0.023563547808350738,
+              0.42071374307112513,
+              0.040979508109817674
+            ],
+            "shape": "box",
+            "size": [
+              1.0706016494361281,
+              0.06867046463094438,
+              0.040089323186892824
+            ]
+          },
+          "source": "primitive"
+        },
+        "collision_bbox_max": [
+          0.06644770062315915,
+          0.9558740821665914,
+          0.07901177255969834
+        ],
+        "collision_bbox_min": [
+          -0.013552299376839551,
+          -0.16412591783340794,
+          0.018341772559699217
+        ],
+        "collision_bbox_size": [
+          0.0799999999999987,
+          1.1199999999999994,
+          0.06066999999999912
+        ],
+        "collision_body_count": 17,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 0.0011198973546951247,
+        "color_rgb": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "com_link_local": [
+          0.026445344285279216,
+          0.3544061943179782,
+          0.03922646931945485
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          -0.09133150970211025,
+          4.2513394640076445,
+          0.623667690393304
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 1.1338930542833152,
+          "ixy": -8.25758562405435e-06,
+          "ixz": 2.6803905049488133e-07,
+          "iyy": 0.006857405164320085,
+          "iyz": 0.00842555304329298,
+          "izz": 1.1373600290206658
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": true,
+        "mass_kg": 8.79119423435673,
+        "material_name": "Steel",
+        "merged_member_paths": [
+          "Linear Actuator Y:1+Component2:1",
+          "Linear Actuator Y:1+Component12:1",
+          "Linear Actuator Y:1+Component10:1",
+          "Linear Actuator Y:1+Component9:1",
+          "Linear Actuator Y:1+Component11:1",
+          "Linear Actuator Y:1+Component5:1",
+          "Linear Actuator Y:1+Component7:1",
+          "Linear Actuator Y:1+Component8:1",
+          "Linear Actuator Y:1+Component6:1",
+          "Linear Actuator Y:1+Component3:1",
+          "Linear Actuator Y:1+Component4:1",
+          "Linear Actuator Y:1+Component18:1",
+          "Linear Actuator Y:1+Component17:1",
+          "Linear Actuator Y:1+Component13:1",
+          "Linear Actuator Y:1+Component15:1",
+          "Linear Actuator Y:1+Component16:1",
+          "Linear Actuator Y:1+Component14:1"
+        ],
+        "mesh_bake_offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_collision": "meshes/Linear_Actuator_Y/Linear_Actuator_Y_Component18_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/Linear_Actuator_Y/Linear_Actuator_Y_Component18.dae",
+        "needs_mesh_bake": false,
+        "occurrence_path": "Linear Actuator Y:1+Component18:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": "Rigid Group 3",
+        "source_world_rotation": [
+          -1.4740550117472861e-15,
+          -5.354846108788231e-13,
+          -0.9999999999999905,
+          -0.9999999999999911,
+          5.439794004365132e-15,
+          1.751610767899429e-15,
+          5.418977323543369e-15,
+          0.9999999999999997,
+          -5.353597107918215e-13
+        ],
+        "urdf_name": "Linear_Actuator_Y_Component18",
+        "volume_m3": 0.0011198973546951247,
+        "wants_accurate_collision": false
+      },
+      "Top_support": {
+        "area_m2": 0.057179991920395634,
+        "assembly": "SimofRack_onlylinear",
+        "bbox_max": [
+          0.05156000000000001,
+          0.025,
+          0.005
+        ],
+        "bbox_min": [
+          -0.05156000000000001,
+          -0.025,
+          -0.08
+        ],
+        "bbox_size": [
+          0.10312000000000002,
+          0.05,
+          0.085
+        ],
+        "body_count": 19,
+        "clean_name": "Top_support",
+        "collision": {
+          "mesh_path": "meshes/SimofRack_onlylinear/Top_support_collision.stl",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": {
+            "orientation_matrix": null,
+            "origin_rpy": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "origin_xyz": [
+              0.0,
+              0.0,
+              -0.0375
+            ],
+            "shape": "box",
+            "size": [
+              0.10312000000000002,
+              0.05,
+              0.085
+            ]
+          },
+          "source": "primitive"
+        },
+        "collision_bbox_max": [
+          0.05156000000000001,
+          0.025,
+          0.005
+        ],
+        "collision_bbox_min": [
+          -0.05156000000000001,
+          -0.025,
+          -0.08
+        ],
+        "collision_bbox_size": [
+          0.10312000000000002,
+          0.05,
+          0.085
+        ],
+        "collision_body_count": 19,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 0.00015120558092157575,
+        "color_rgb": [
+          0.6274509803921569,
+          0.6274509803921569,
+          0.6274509803921569
+        ],
+        "com_link_local": [
+          -2.8491790467149453e-07,
+          0.00774627444664568,
+          -0.039999944426535566
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          -0.17530606644800678,
+          4.241292713426052,
+          1.6045417725595603
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 0.000881786458693527,
+          "ixy": -6.498086708654331e-09,
+          "ixz": 1.0365717771912064e-09,
+          "iyy": 0.0015141831971670124,
+          "iyz": 1.2005322518981836e-09,
+          "izz": 0.0011583403389995369
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": false,
+        "mass_kg": 1.1869638102343696,
+        "material_name": "Steel",
+        "merged_member_paths": [],
+        "mesh_bake_offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_collision": "meshes/SimofRack_onlylinear/Top_support_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/SimofRack_onlylinear/Top_support.dae",
+        "needs_mesh_bake": false,
+        "occurrence_path": "Top_support:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": null,
+        "source_world_rotation": [
+          9.017786517514031e-14,
+          -1.2857101292761688e-14,
+          -0.9999999999999993,
+          0.9999999999999953,
+          -2.1427794260218864e-14,
+          9.145462165347596e-14,
+          -2.1445141494148246e-14,
+          -1.0000000000000002,
+          1.292649023515733e-14
+        ],
+        "urdf_name": "Top_support",
+        "volume_m3": 0.00015120558092157575,
+        "wants_accurate_collision": false
+      },
+      "base_link": {
+        "area_m2": 19.29252510219216,
+        "assembly": "SimofRack_onlylinear",
+        "bbox_max": [
+          1.12832562671956,
+          1.8865771142157302,
+          0.30557656705543984
+        ],
+        "bbox_min": [
+          -0.03319708536994016,
+          -0.12692288578427832,
+          -0.5999904615976215
+        ],
+        "bbox_size": [
+          1.1615227120895002,
+          2.0135000000000085,
+          0.9055670286530613
+        ],
+        "body_count": 5,
+        "clean_name": "ISS_RACK",
+        "collision": {
+          "mesh_path": "meshes/SimofRack_onlylinear/base_link_collision.stl",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": {
+            "orientation_matrix": [
+              -0.999921098660931,
+              0.010773133036559735,
+              -0.006460344982532702,
+              0.011167151038944643,
+              0.9978602583223054,
+              -0.06442204280070256,
+              0.005752494275542376,
+              -0.06448910346344365,
+              -0.9979018310155018
+            ],
+            "origin_rpy": [
+              -3.0770576969754133,
+              -0.005752526002162035,
+              3.1304250856541374
+            ],
+            "origin_xyz": [
+              0.5089218522481226,
+              1.5357060558912452,
+              0.22300766645005904
+            ],
+            "shape": "box",
+            "size": [
+              1.0838269619198684,
+              0.1758037697825625,
+              0.06451951128489669
+            ]
+          },
+          "source": "primitive"
+        },
+        "collision_bbox_max": [
+          1.12832562671956,
+          1.8865771142157302,
+          0.30557656705543984
+        ],
+        "collision_bbox_min": [
+          -0.03319708536994016,
+          -0.12692288578427832,
+          -0.5999904615976215
+        ],
+        "collision_bbox_size": [
+          1.1615227120895002,
+          2.0135000000000085,
+          0.9055670286530613
+        ],
+        "collision_body_count": 17,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 0.4559821943301004,
+        "color_rgb": [
+          0.6274509803921569,
+          0.6274509803921569,
+          0.6274509803921569
+        ],
+        "com_link_local": [
+          0.521882151071114,
+          0.8007125906518902,
+          -0.3348931477269625
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          -0.5187032744446969,
+          4.487476412165895,
+          0.13227162609754162
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 1314.742437798093,
+          "ixy": 0.7072869838232546,
+          "ixz": 2.6795639320947626,
+          "iyy": 633.0665984722376,
+          "iyz": -0.10962772351536643,
+          "izz": 1520.4255023631154
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": true,
+        "mass_kg": 3579.4602254912893,
+        "material_name": "Steel",
+        "merged_member_paths": [
+          "Steel Adapter:1",
+          "Steel Adapter:2",
+          "3136N175_T-Slotted Framing:3",
+          "3136N175_T-Slotted Framing:1",
+          "47065T513_T-Slotted Framing:2",
+          "Steel Adapter:3",
+          "3136N175_T-Slotted Framing:6",
+          "47065T426_T-Slotted Framing:1",
+          "47065T513_T-Slotted Framing:1",
+          "3136N175_T-Slotted Framing:4",
+          "3136N175_T-Slotted Framing:7",
+          "Steel Adapter:4",
+          "ISS RACK:1"
+        ],
+        "mesh_bake_offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_collision": "meshes/SimofRack_onlylinear/base_link_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/SimofRack_onlylinear/base_link.dae",
+        "needs_mesh_bake": false,
+        "occurrence_path": "ISS RACK:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": "Whole Rack Gemo",
+        "source_world_rotation": [
+          0.9999999999999994,
+          -2.4715776111057683e-15,
+          2.433452360034604e-28,
+          2.530008793711874e-30,
+          -8.670411420754784e-14,
+          -0.9999999999999989,
+          4.996003610813206e-16,
+          1.0000000000000013,
+          -8.57092175010621e-14
+        ],
+        "urdf_name": "base_link",
+        "volume_m3": 0.4559821943301004,
+        "wants_accurate_collision": false
+      }
+    },
+    "name": "SimofRack_onlylinear",
+    "root_link": "base_link",
+    "warnings": [
+      "Multi-parent link detected (child=Top_support:1): keeping 'Top_Slider' as the URDF tree parent; routing ['Ybar_topslider'] to ``closing_joints`` (sidecar) \u2014 closed kinematic loop.  Tag the loop-closing joint(s) with prefix ``!closing_*`` in Fusion to make the choice explicit and avoid this warning.",
+      "Root link renamed: 'Whole_Rack_Gemo' \u2192 'base_link' (REP 120 convention). Consider renaming the component to 'base_link' in Fusion."
+    ]
+  }
+}
